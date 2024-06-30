@@ -7,20 +7,27 @@ import { Font } from "../../../../utils/theme/typo";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import DeleteIcon from "@mui/icons-material/Delete";
+
 const AppointmentScheduler = () => {
   return (
     <Box
       sx={{
-        p: 4,
+        p: {
+          lg: 4,
+          xs: 4,
+        },
         backgroundColor: "white",
         borderRadius: 2,
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
         mt: 9,
       }}
+      className="shadow"
     >
       <Box
         sx={{
-          display: "flex",
+          display: {
+            lg: "flex",
+            xs: "block",
+          },
           justifyContent: "space-between",
           alignItems: "center",
           mb: 3,
@@ -40,10 +47,10 @@ const AppointmentScheduler = () => {
         </Button>
       </Box>
       <Grid spacing={3} container>
-        <Grid xs={2} sx={{ color: "green" }}>
+        <Grid xs={12} lg={2} sx={{ color: "green" }}>
           <Font> 09.00 AM</Font>
         </Grid>
-        <Grid xs={10}>
+        <Grid xs={12} lg={10}>
           <Box sx={{ display: "flex" }}>
             <ArrowRightIcon sx={{ color: "grey" }} />
             <Font sx={{ ml: 2, mr: 2, color: "grey" }}>10.00 AM</Font>
@@ -55,10 +62,10 @@ const AppointmentScheduler = () => {
             <Font sx={{ color: "grey" }}>Jacob Willson</Font>
           </Box>
         </Grid>
-        <Grid xs={2} sx={{ color: "green" }}>
+        <Grid xs={12} lg={2} sx={{ color: "green" }}>
           <Font> 09.00 AM</Font>
         </Grid>
-        <Grid xs={10}>
+        <Grid xs={12} lg={10}>
           <Box sx={{ display: "flex" }}>
             <ArrowRightIcon sx={{ color: "grey" }} />
             <Font sx={{ ml: 2, mr: 2, color: "grey" }}>11.00 AM</Font>
@@ -76,7 +83,10 @@ const AppointmentScheduler = () => {
               backgroundColor: "white",
               borderRadius: 2,
               mt: 4,
-              width: 400,
+              width: {
+                lg: "400",
+                xs: "100%",
+              },
             }}
           >
             <Box display={"flex"} gap={4}>
@@ -100,9 +110,13 @@ const AppointmentScheduler = () => {
             <Divider />
             <Box
               sx={{
-                display: "flex",
+                display: {
+                  xs: "flex",
+                },
                 justifyContent: "space-between",
                 mt: 3,
+                gap: 2,
+                flexWrap: "wrap",
               }}
             >
               <Button

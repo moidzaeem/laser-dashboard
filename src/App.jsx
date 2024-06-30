@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 
 function App() {
   const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+  const isMdUp = useMediaQuery(theme.breakpoints.up("lg"));
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -65,7 +65,10 @@ function App() {
             lg: 26,
             xs: 0,
           },
-          p: 6,
+          p: {
+            lg: 6,
+            xs: 2,
+          },
         }}
       >
         <DashboardContent />

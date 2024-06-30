@@ -39,11 +39,17 @@ const services = [
 
 const ServiceCards = () => {
   return (
-    <Box mt={4}>
-      <Font variant="h6" component="h2" sx={{ mb: 2 }}>
-        Services disponibles dans mon centre
-      </Font>
-      <Box display="flex" flexWrap="wrap" gap={2}>
+    <Box style={{ width: "100%" }} mt={4}>
+      <Font sx={{ mb: 4 }}>Services disponibles dans mon centre</Font>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 1,
+          width: "100%",
+        }}
+        gap={2}
+      >
         {services.map((service, index) => (
           <Box
             key={index}
@@ -51,7 +57,10 @@ const ServiceCards = () => {
               display: "flex",
               alignItems: "center",
               flexDirection: "row",
-              width: "calc(50% - 16px)",
+              width: {
+                lg: "calc(50% - 16px)",
+                xs: "100%",
+              },
               padding: 2,
               backgroundColor: "white",
               borderRadius: 2,

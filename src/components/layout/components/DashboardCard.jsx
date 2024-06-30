@@ -1,45 +1,35 @@
+/* eslint-disable react/prop-types */
 import { Box } from "@mui/material";
 import { Caption, Font } from "../../../../utils/theme/typo";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-const DashboardCards = () => {
-  const cards = [
-    {
-      title: "Rendez-Vous du jour",
-      mainValue: "8 / 10",
-      subValue: "80% De la disponibilité occupée",
-    },
-    {
-      title: "Praticiens Disponibles",
-      mainValue: "1 / 2",
-      subValue: "50% Des effectifs présents",
-    },
-    {
-      title: "Praticiens Disponibles",
-      mainValue: "1 / 2",
-      subValue: "50% Des effectifs présents",
-    },
-    {
-      title: "Praticiens Disponibles",
-      mainValue: "1 / 2",
-      subValue: "50% Des effectifs présents",
-    },
-  ];
 
+// eslint-disable-next-line react/prop-types
+const DashboardCards = ({ cards }) => {
   return (
-    <Box display="flex" justifyContent="space-between" gap={3} mt={3}>
-      {cards.map((card, index) => (
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 1,
+      }}
+      justifyContent="space-between"
+      mt={3}
+    >
+      {cards?.map((card, index) => (
         <Box
           key={index}
           sx={{
-            width: "30%",
+            width: {
+              lg: "250px",
+              xs: "100%",
+            },
             backgroundColor: "white",
             padding: 3,
             borderRadius: 2,
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             textAlign: "start",
           }}
+          className="shadow"
         >
-          <CalendarMonthIcon style={{ fontSize: 40, color: "#1E7F6F" }} />
+          <span style={{ color: "#1E7F6F" }}> {card.icon}</span>
           <Font sx={{ mt: 2 }}>{card.title}</Font>
           <Font sx={{ mt: 1, fontSize: 20, fontWeight: 700, color: "#1E7F6F" }}>
             {card.mainValue}

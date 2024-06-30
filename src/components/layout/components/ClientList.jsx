@@ -96,75 +96,11 @@ const ClientList = () => {
               Ajouter
             </Button>
           </ListItemAvatar>
-
-          {/* <ListItemText
-            primary="Sarah Cook"
-            secondary={
-              <Box>
-                <Font>
-                  <Grid container alignItems={"center"} spacing={1}>
-                    <Grid item xs={6}>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", mb: 2 }}
-                      >
-                        <MailOutlineIcon sx={{ mr: 2 }} /> ID Client:{" "}
-                        {clients[0].id}
-                      </Box>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", mb: 2 }}
-                      >
-                        <MailOutlineIcon sx={{ mr: 2 }} /> Adresse Mail:{" "}
-                        {clients[0].email}
-                      </Box>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", mb: 2 }}
-                      >
-                        <PhoneIcon sx={{ mr: 2 }} /> Téléphone:{" "}
-                        {clients[0].phone}
-                      </Box>
-                    </Grid>
-                    <Grid item xs={6}>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", mb: 2 }}
-                      >
-                        <CalendarTodayIcon sx={{ mr: 2 }} /> Date Naissance:{" "}
-                        {clients[0].birthDate}
-                      </Box>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", mb: 2 }}
-                      >
-                        <LocationOnIcon sx={{ mr: 2 }} /> Centre Favoris:{" "}
-                        {clients[0].favoriteCenter}
-                      </Box>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", mb: 2 }}
-                      >
-                        <WcIcon sx={{ mr: 2 }} /> Genre: {clients[0].gender}
-                      </Box>
-                      <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <NotInterestedIcon sx={{ mr: 2 }} /> Services
-                        Sélectionnés: {clients[0].services.join(", ")}
-                      </Box>
-                    </Grid>
-                  </Grid>
-                </Font>
-                <Button
-                  variant="contained"
-                  color="success"
-                  size="small"
-                  startIcon={<AddIcon />}
-                  sx={{ mt: 1, background: "#21A282", borderRadius: 2 }}
-                >
-                  Ajouter
-                </Button>
-              </Box>
-            }
-          /> */}
         </ListItem>
         <Box sx={{ ml: 3, mt: 4 }}>
           <Font>
             <Grid container alignItems={"center"} spacing={1}>
-              <Grid item xs={6}>
+              <Grid item lg={6} xs={12}>
                 <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                   <MailOutlineIcon sx={{ mr: 2 }} /> ID Client: {clients[0].id}
                 </Box>
@@ -176,7 +112,7 @@ const ClientList = () => {
                   <PhoneIcon sx={{ mr: 2 }} /> Téléphone: {clients[0].phone}
                 </Box>
               </Grid>
-              <Grid item xs={6}>
+              <Grid item lg={6} xs={12}>
                 <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
                   <CalendarTodayIcon sx={{ mr: 2 }} /> Date Naissance:{" "}
                   {clients[0].birthDate}

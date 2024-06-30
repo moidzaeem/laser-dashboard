@@ -28,6 +28,8 @@ import { styled } from "@mui/system";
 import AppButton from "../../ui/Button";
 import { secondary } from "../../../../utils/theme/colors";
 import { Font } from "../../../../utils/theme/typo";
+import { useDispatch } from "react-redux";
+import { setView } from "../../../redux/slice/dashboardSlice";
 
 const SidebarContainer = styled(Drawer)(({ theme }) => ({
   "& .MuiDrawer-paper": {
@@ -86,6 +88,7 @@ const menuItems = [
 ];
 
 export function Sidebar() {
+  const dispatch = useDispatch();
   const [open, setOpen] = React.useState({});
 
   const handleClick = (item) => {
@@ -108,7 +111,9 @@ export function Sidebar() {
               onClick={() => item.subItems && handleClick(item.text)}
             >
               <ListItemIcon sx={{ color: "white" }}>{item.icon}</ListItemIcon>
-              <Font>{item.text}</Font>
+              <Font onClick={() => dispatch(setView(item.text))}>
+                {item.text}
+              </Font>
               {/* <ListItemText primary={item.text} /> */}
               {item.subItems ? (
                 open[item.text] ? (

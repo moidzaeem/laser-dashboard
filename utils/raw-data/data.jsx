@@ -1,3 +1,8 @@
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import WarningIcon from "@mui/icons-material/Warning";
+import CameraIcon from "@mui/icons-material/Camera";
+
 export const CountrySvg = [
   {
     name: "Argentine",
@@ -140,5 +145,59 @@ export const CountrySvg = [
         ></path>
       </svg>
     ),
+  },
+];
+
+export const CardsData = [
+  {
+    title: "Rendez-Vous du jour",
+    mainValue: "8 / 10",
+    subValue: "80% De la disponibilité occupée",
+    icon: <CameraAltIcon />,
+  },
+  {
+    title: "Praticiens Disponibles",
+    mainValue: "1 / 2",
+    subValue: "50% Des effectifs présents",
+    icon: <PeopleAltIcon />,
+  },
+  {
+    title: "Praticiens Disponibles",
+    mainValue: "1 / 2",
+    subValue: "50% Des effectifs présents",
+    icon: <CameraAltIcon />,
+  },
+  {
+    title: "Praticiens Disponibles",
+    mainValue: "1 / 2",
+    subValue: "50% Des effectifs présents",
+    icon: <CameraAltIcon />,
+  },
+];
+
+export const CardsDataTwo = [
+  {
+    title: "Nombre de Clients",
+    mainValue: "8 / 10",
+    subValue: "16% par rapport au <mois précédent>",
+    icon: <CameraIcon />,
+  },
+  {
+    title: "Nombre Praticien",
+    mainValue: "1 / 2",
+    subValue: "16% par rapport au <mois précédent>",
+    icon: <CameraAltIcon />,
+  },
+  {
+    title: "Nombre de RDV",
+    mainValue: "1 / 2",
+    subValue: "Temps restant avant rdv",
+    icon: <CameraAltIcon />,
+  },
+  {
+    title: "Attribution RDV en attente ",
+    mainValue: "1 / 2",
+    subValue: "Temps restant avant rdv",
+    icon: <WarningIcon />,
   },
 ];
