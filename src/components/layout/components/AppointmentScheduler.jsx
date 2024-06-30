@@ -1,4 +1,4 @@
-import { Box, Button, Divider } from "@mui/material";
+import { Box, Button, Divider, IconButton } from "@mui/material";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MessageIcon from "@mui/icons-material/Message";
@@ -119,34 +119,51 @@ const AppointmentScheduler = () => {
                 flexWrap: "wrap",
               }}
             >
-              <Button
-                sx={{ background: "#21A282" }}
-                variant="contained"
+              <IconButton
                 color="success"
+                sx={{
+                  background: "#21A282",
+                  "&:hover": {
+                    background: "#1d8f6d",
+                  },
+                }}
               >
-                <DeleteIcon />
-              </Button>
-              <Button
-                sx={{ background: "#21A282" }}
-                variant="contained"
+                <DeleteIcon color="success" sx={{ color: "white" }} />
+              </IconButton>
+              <IconButton
                 color="success"
+                sx={{
+                  background: "#21A282",
+                  "&:hover": {
+                    background: "#1d8f6d",
+                  },
+                }}
               >
-                <PhoneIcon />
-              </Button>
-              <Button
-                sx={{ background: "#21A282" }}
-                variant="contained"
+                <PhoneIcon color="success" sx={{ color: "white" }} />
+              </IconButton>
+              <IconButton
                 color="success"
+                sx={{
+                  background: "#21A282",
+                  "&:hover": {
+                    background: "#1d8f6d",
+                  },
+                }}
               >
-                <MessageIcon />
-              </Button>
-              <Button
-                sx={{ background: "#21A282" }}
-                variant="contained"
+                <MessageIcon color="success" sx={{ color: "white" }} />
+              </IconButton>
+              <IconButton
                 color="success"
+                sx={{
+                  background: "#21A282",
+                  "&:hover": {
+                    background: "#1d8f6d",
+                  },
+                }}
               >
-                <PersonIcon />
-              </Button>
+                <PersonIcon color="success" sx={{ color: "white" }} />
+              </IconButton>
+
               <Button
                 sx={{ background: "#21A282" }}
                 variant="contained"

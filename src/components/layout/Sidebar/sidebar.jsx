@@ -26,7 +26,7 @@ import {
 } from "@mui/icons-material";
 import { styled } from "@mui/system";
 import AppButton from "../../ui/Button";
-import { secondary } from "../../../../utils/theme/colors";
+import { primary, secondary } from "../../../../utils/theme/colors";
 import { Font } from "../../../../utils/theme/typo";
 import { useDispatch } from "react-redux";
 import { setView } from "../../../redux/slice/dashboardSlice";
@@ -110,7 +110,7 @@ export function Sidebar() {
               sx={{ mt: 3 }}
               onClick={() => item.subItems && handleClick(item.text)}
             >
-              <ListItemIcon sx={{ color: "white" }}>{item.icon}</ListItemIcon>
+              <ListItemIcon sx={{ color: primary }}>{item.icon}</ListItemIcon>
               <Font onClick={() => dispatch(setView(item.text))}>
                 {item.text}
               </Font>
