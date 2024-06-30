@@ -6,9 +6,9 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Typography,
   Button,
   IconButton,
+  InputAdornment,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -17,6 +17,9 @@ import PersonIcon from "@mui/icons-material/Person";
 import DescriptionIcon from "@mui/icons-material/Description";
 import { green, red } from "@mui/material/colors";
 import { primary } from "../../../../utils/theme/colors";
+import { Font } from "../../../../utils/theme/typo";
+import { InputField } from "../../ui/Input";
+import SearchIcon from "@mui/icons-material/Search";
 
 const data = [
   {
@@ -91,17 +94,34 @@ const StatusButton = styled(Button)(({ status }) => ({
 const ClientListTable = () => {
   return (
     <Box sx={{ padding: 4 }}>
-      <Typography variant="h4" component="div" sx={{ fontWeight: "bold" }}>
+      <Font sx={{ fontWeight: "bold", fontSize: 30, mb: 3 }}>
         Tous les clients
-      </Typography>
-      <Typography
-        variant="h6"
-        component="div"
-        sx={{ color: "green", marginBottom: 2 }}
+      </Font>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
       >
-        Active Members
-      </Typography>
-
+        <Font
+          variant="h6"
+          component="div"
+          sx={{ color: "green", marginBottom: 2 }}
+        >
+          Active Members
+        </Font>
+        <InputField
+          placeholder="Search ..."
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon color="success" />
+              </InputAdornment>
+            ),
+          }}
+        />
+      </Box>
       <TableContainer>
         <Table>
           <TableHead>
